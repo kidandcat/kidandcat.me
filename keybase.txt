@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/kidandcat
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kidandcat.me
+  * I am kidandcat (https://keybase.io/kidandcat) on keybase.
+  * I have a public key with fingerprint 6F9F C7E7 1C7A C03E B0BC  CE83 282E E107 2581 2150
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fdf2cc12d8b1f938f6056be626ee35351518278b2414d0a1a0891b03ce8e07870a",
+      "fingerprint": "6f9fc7e71c7ac03eb0bcce83282ee10725812150",
+      "host": "keybase.io",
+      "key_id": "282ee10725812150",
+      "kid": "0101feba4dd5aef5f99227aa3d5870a1ebf25bdc336ff19efe12d5876305234272520a",
+      "uid": "2bafbec0a410fa9ec664266dfbc72019",
+      "username": "kidandcat"
+    },
+    "service": {
+      "hostname": "kidandcat.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1570719199,
+  "expire_in": 157680000,
+  "prev": "9f8c655e0e7d63308776b42f4da0d5361eb9e32bb687093ed43ae7bd60d9a965",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMNsAnicbVJ9TFVlGAcRFVI+BGwpu6sTpsPb5X3Puefr0jDYMEgUJroVE/B8vOd6
+Au693Hv4uN0uSbBGLExafAlGIY1ozlp8uOEFQlrLIEmZOTIFAoFi1U0hYiJ2DuU/
+rfefd8/z/J7f83t+e77c4ucT6LvbMLlxZ+lTab5DAw0FPpnNieMujLeKTszkwnLQ
+2odyReRQsnNkETNhAOJAEiVcECAuMjyUWIKRKEBSPKJwCiGCJEhIQganGR43QqMI
+OMgBhoU8IATEIEAzNOAwPSbJFjOy2+yyRVFpKYmVBBrRUKA5ARCIB7ygwgmcwRGC
+gMZJBuKQBGrjcatD61DF8ZwDGWSrmlOD7DV5/4N/pBtACfGcURRJDkmkxLI4TnMc
+IZKaIIh4CSd5USAISpIgiySk7qeWKAKQOGHEVUZ8TXfBP3N4TuKRADgjBBLHIoGi
+jDhFiRIv0DiArAZ0ILuFy0OaVlnkLKLAKZhbj6npQllAmrPaKv+FGNRQj9nsVsUq
+WHPVynFFsTlMWqfitGnQIsRn/0uSzcsWUTVS7ShEdodstWAmqCIFRdZYIUkDGrKQ
+ZfUYKrbJdpQtW9bSFAPUp81BhSolKzECRZIIIFqkCAIwNE3xRlwyihwQSYJS7WER
+gfM8pZrFEkg0EhyieZECIsuxFIlpa+VbrJgJp1WdnFnldMhmC6cU2BHmvjRwdL2P
+b6DPBv912oX5BAaEPLq7eXfwQyWkfuktV2/be4O727KW8qoVY16jfjAiM/VFP0NW
+0KEBpydy+8quJ3O2WstPbhuNX0roL5lIijG5zi1eTvGerrzwWAJ7bX/l6cbqY98F
+X0mHK3tnEm5vju2oqpOmVztWKM/naXvu2Wvi24P6H8wpehSV9a6hd/3VkHtlV29d
+3yFc//Ns5pZT588eCD5Rlpjy7F9FtnFH+NBw+8hL/lXxx8CU+e1PrnQ+/drU/e/n
+/rg2HjNzcwjEnSxbnP65tbRfGltYGpOGD4J1d/J0ud2xcbr5g1/LVbqFuJne/Gj4
+redjj25voXtyf9/q4xOfVqWz9fcrXR32zw4P4sX1NSe8tblLoZduej+qtZ0K6970
+wqh/Q+nhYF1M/p28rIAS44bouz2HWkqXX/d2JgU6+840zKYVRLk9htBUamReNxhp
+rnmzgfXHpoJa5psW0492lX31TkVKeN1oTubOnub2i+5XKyIt1oqHaUc+/GHbSFno
+8CTYHjZ+o+fAvHeYeuV8945lLJrvJAKew4tgqlOaHvf3LETQEy9/U42PjDkTy1s3
+b6Qybq9aFi82ZzU+2BdZFNVn7sqglpXk2tbZM6K+5ZnwXxLfbwr4IHE22bd/U8bl
+0d+8Cz/9qMwm3eiyNjeNJtMdI+XunAhPdMm55393BB0JcxU3l979dY/f1i866m7t
+gm2hGXNPxL5x4W9s0cUp
+=aGOy
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kidandcat
+
+==================================================================

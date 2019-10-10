@@ -5,15 +5,15 @@ proc starLevel(pos, level: int): string =
   return "is-empty"
 
 proc experience(title: string, desc: varargs[string]): VNode =
-  result = buildHtml tdiv(class="nes-container with-title is-rounded experience"):
+  return buildHtml tdiv(class="nes-container with-title is-rounded experience"):
     p(class="title"):
       text title
     for d in desc:
-      p:
+      p(class="experience-text"):
         text d
 
 proc skill(name: string, level: int, love = false): VNode =
-  result = buildHtml a(class="skill"):
+  return buildHtml a(class="skill"):
       tdiv:
         if love:
           span(class="nes-icon heart love")
@@ -27,26 +27,59 @@ proc skill(name: string, level: int, love = false): VNode =
         span(class="nes-icon is-large star " & starLevel(5, level))
 
 proc socialNetworks(): VNode =
-  result = buildHtml tdiv(class="socials"):
+  return buildHtml tdiv(class="socials"):
     a(href="https://twitter.com/kidandcat", target="_blank"):
       italic(class="nes-icon twitter")
     a(href="https://github.com/kidandcat", target="_blank"):
       italic(class="nes-icon github")
     a(href="https://linkedin.com/in/kidandcat", target="_blank"):
       italic(class="nes-icon linkedin")
+    a(href="https://www.youtube.com/user/interacso", target="_blank"):
+      italic(class="nes-icon youtube")
+    a(href="https://keybase.io/kidandcat", target="_blank"):
+      img(class="social-icon", src="keybase.png")
 
 proc actions(): VNode =
-  result = buildHtml tdiv(class="actions"):
+  return buildHtml tdiv(class="actions"):
     a(class="nes-btn", href="mailto:kidandcat@gmail.com"):
       text "Email Jairo"
 
 proc balloonClass(): string =
-  if window.screen.width > 700:
+  if window.screen.width > 800:
     return "nes-balloon from-left"
   return "nes-balloon"
 
+var isHard = true
+
+proc getLevelClass(kind: string): string =
+  if kind == "hard":
+    if isHard:
+      return "nes-btn is-error"
+    return "nes-btn"
+  if kind == "easy":
+    if isHard:
+      return "nes-btn"
+    return "nes-btn is-success"
+
+proc level(): VNode =
+  return buildHtml tdiv(class="level"):
+    span:
+      text "Level: "
+    button(class=getLevelClass("easy"), id="easy"):
+      text "Easy"
+      proc onclick(ev: Event; n: VNode) =
+        isHard = false
+        for el in document.querySelectorAll(".experience-text"):
+          el.classList.add("easyfont")
+    button(class=getLevelClass("hard"), id="hard"):
+      text "Hard"
+      proc onclick(ev: Event; n: VNode) =
+        isHard = true
+        for el in document.querySelectorAll(".experience-text"):
+          el.classList.remove("easyfont")
+
 proc createDom(): VNode =
-  result = buildHtml(tdiv(class="main")):
+  return buildHtml(tdiv(class="main")):
     tdiv(class=balloonClass(), id="saying"):
       p: 
         text "Welcome to my CV"
@@ -78,6 +111,7 @@ proc createDom(): VNode =
         h3:
           italic(class="nes-icon trophy")
           text "Experience"
+        level()
         experience("Netelip", """
         Netelip was my first home, I had my intership there after I finished my latest studies, after 3 months of 
         intership I stayed there working, in total I spent there 1 year. My first job was to make a complex platform
@@ -93,6 +127,9 @@ proc createDom(): VNode =
         Indigitall was a startup located in Madrid, the company focused on it Push Notifications As a Service, again, my job was
         to maintain and upgrade the backend they had in PHP, Symfony too.
         """)
+    footer:
+      text "This website has been made with "
+      img(src="nim.png")
 
 setRenderer createDom
 addStylesheet "https://unpkg.com/nes.css@latest/css/nes.min.css"

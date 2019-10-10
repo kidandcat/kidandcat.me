@@ -55,10 +55,10 @@ h3 i {
 }
 
 #avatar-img {
-    image-rendering: pixelated;
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+    /*image-rendering: pixelated;*/
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
 
 .socials a {
@@ -67,6 +67,8 @@ h3 i {
 
 .socials {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .actions {
@@ -89,20 +91,23 @@ h3 i {
 
 .skill {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px;
     justify-content: flex-end;
-    transform: translateX(-100px);
+    transform: translateX(0px);
 }
-
 .skill-name {
-    font-size: 1.2em;
-    margin-right: 30px;
+    font-size: 1.4em;
 }
 
 .experience {
     max-width: 40vw;
     margin-bottom: 50px !important;
+}
+
+.experience-text {
+    font-size: 0.9em;
 }
 
 .nes-container .title {
@@ -116,9 +121,33 @@ h3 i {
     left: 5px;
 }
 
+footer {
+    color: white;
+    background-color: black;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.social-icon{
+    width: 32px;
+    height: 32px;
+}
 
-@media (max-width: 700px) {
+.level {
+    margin-bottom: 40px;
+}
+
+#easy {
+    margin-right: 10px;
+}
+
+.easyfont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+@media (max-width: 800px) {
     .sections {
         flex-direction: column;
     }
@@ -130,17 +159,8 @@ h3 i {
         margin-bottom: 20px;
         transform: scale(2);
     }
-    .skill {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
-        justify-content: flex-end;
-        transform: translateX(0px);
-    }
     .skill-name {
         font-size: 1.2em;
-        margin-right: 5px;
     }
     #saying {
         left: 0px;
