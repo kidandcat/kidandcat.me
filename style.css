@@ -78,6 +78,10 @@ h3 i {
     font-size: 1.5em;
 }
 
+.name span {
+    text-align: center;
+}
+
 #saying {
     position: relative;
     left: 200px;
@@ -108,7 +112,8 @@ h3 i {
 
 .love {
     position: relative;
-    bottom: 15px;
+    bottom: 5px;
+    left: 5px;
 }
 
 
@@ -136,5 +141,8 @@ h3 i {
     .skill-name {
         font-size: 1.2em;
         margin-right: 5px;
+    }
+    #saying {
+        left: 0px;
     }
 }

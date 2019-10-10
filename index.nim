@@ -40,9 +40,14 @@ proc actions(): VNode =
     a(class="nes-btn", href="mailto:kidandcat@gmail.com"):
       text "Email Jairo"
 
+proc balloonClass(): string =
+  if window.screen.width > 700:
+    return "nes-balloon from-left"
+  return "nes-balloon"
+
 proc createDom(): VNode =
   result = buildHtml(tdiv(class="main")):
-    tdiv(class="nes-balloon from-left", id="saying"):
+    tdiv(class=balloonClass(), id="saying"):
       p: 
         text "Welcome to my CV"
     tdiv(class="avatar"):
