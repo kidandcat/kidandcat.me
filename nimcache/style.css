@@ -27,6 +27,7 @@ h3 i {
     image-rendering: pixelated;
     width: 300px;
     height: 300px;
+    border-radius: 150px;
 }
 
 .socials a {
@@ -71,6 +72,7 @@ h3 i {
 
 .nes-container .title {
     font-size: 1.5em !important;
+    transform: translateY(-20px);
 }
 
 .love {
