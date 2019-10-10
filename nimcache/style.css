@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 * {
     font-family: 'Press Start 2P', cursive;
 }
@@ -10,8 +14,27 @@
     flex-direction: column;
 }
 
+h3 {
+    margin: 50px;
+    font-size: 1.8em;
+}
+
+h3 i {
+    margin-right: 30px !important;
+}
+
+#avatar-img {
+    image-rendering: pixelated;
+    width: 300px;
+    height: 300px;
+}
+
 .socials a {
     margin: 10px;
+}
+
+.socials {
+    margin-bottom: 100px;
 }
 
 .actions {
@@ -39,6 +62,15 @@
 .skill-name {
     font-size: 1.2em;
     margin-right: 30px;
+}
+
+.experience {
+    max-width: 1000px;
+    margin-bottom: 50px !important;
+}
+
+.nes-container .title {
+    font-size: 1.5em !important;
 }
 
 .love {

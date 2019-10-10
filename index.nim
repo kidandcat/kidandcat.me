@@ -4,6 +4,14 @@ proc starLevel(pos, level: int): string =
   if level >= pos: return ""
   return "is-empty"
 
+proc experience(title: string, desc: varargs[string]): VNode =
+  result = buildHtml tdiv(class="nes-container with-title is-rounded experience"):
+    p(class="title"):
+      text title
+    for d in desc:
+      p:
+        text d
+
 proc skill(name: string, level: int, love = false): VNode =
   result = buildHtml a(class="skill"):
       if love:
@@ -32,16 +40,16 @@ proc actions(): VNode =
 
 proc createDom(): VNode =
   result = buildHtml(tdiv(class="main")):
+    tdiv(class="name"):
+      span:
+        text "Jairo Caro-Accino Viciana"
+    actions()
+    socialNetworks()
     tdiv(class="nes-balloon from-left", id="saying"):
       p: 
         text "These are my skills"
     tdiv(class="avatar"):
-      img(src="avatar.jpg")
-    tdiv(class="name"):
-      span:
-        text "Jairo Caro-Accino Viciana"
-    socialNetworks()
-    actions()
+      img(src="avatar.jpg", id="avatar-img", class="nes-avatar is-large")
     tdiv(class="badges"):
       skill("react", 5)
       skill("JS", 5)
@@ -50,10 +58,27 @@ proc createDom(): VNode =
       skill("CSS", 4)
       skill("PHP", 3)
       skill("Windows", 3)
-      skill("Mac", 0)
+      skill("Mac", 1)
       skill("Linux", 4)
       skill("Networking", 3)
       skill("Security", 3)
+    h3:
+      italic(class="nes-icon trophy")
+      text "Experience"
+    experience("Netelip", """
+    Netelip was my first home, I had my intership there after I finished my latest studies, after 3 months of 
+    intership I stayed there working, in total I spent there 1 year. My first job was to make a complex platform
+    to work, it was developed in symfony, but it was unusable due to the high latency (up to 5s to do any action)
+    in the frontend, the first thing I did was update to PHP7, just with that, it became much more responsive.
+    """, """
+    After that I introduced a real time monitoring system (which we watched on a big TV in the office), some services
+    connecting with Asterisk SIP using Janus Gateway, and a VPS service with NodeJS and Proxmox.
+    """, """
+    I learnt a lot in Netelip, but I was ambitious, and I wanted to experiment life outside of my city, so I moved to...
+    """)
+    experience("Indigitall", """
+    Indigitall was a startup located in Madrid, and so I moved to Madrid
+    """)
 
 setRenderer createDom
 addStylesheet "https://unpkg.com/nes.css@latest/css/nes.min.css"
