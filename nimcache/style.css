@@ -1,0 +1,47 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socials a {
+    margin: 10px;
+}
+
+.actions {
+    margin: 20px;
+}
+
+.name {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+#saying {
+    position: relative;
+    left: 200px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: flex-end;
+    transform: translateX(-100px);
+}
+
+.skill-name {
+    font-size: 1.2em;
+    margin-right: 30px;
+}
+
+.love {
+    position: relative;
+    bottom: 15px;
+}
