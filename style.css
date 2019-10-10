@@ -1,0 +1,140 @@
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('kongtext.ttf')  format('truetype')
+}
+
+* {
+    font-family: 'Pixel', cursive;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sections {
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100vw;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100vw;
+}
+
+h3 {
+    margin: 50px;
+    font-size: 1.8em;
+}
+
+h3 i {
+    margin-right: 30px !important;
+}
+
+#avatar-img {
+    image-rendering: pixelated;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.socials a {
+    margin: 10px;
+}
+
+.socials {
+    margin-bottom: 100px;
+}
+
+.actions {
+    margin: 20px;
+}
+
+.name {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+#saying {
+    position: relative;
+    left: 200px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: flex-end;
+    transform: translateX(-100px);
+}
+
+.skill-name {
+    font-size: 1.2em;
+    margin-right: 30px;
+}
+
+.experience {
+    max-width: 40vw;
+    margin-bottom: 50px !important;
+}
+
+.nes-container .title {
+    font-size: 1.5em !important;
+    transform: translateY(-20px);
+}
+
+.love {
+    position: relative;
+    bottom: 15px;
+}
+
+
+
+@media (max-width: 700px) {
+    .sections {
+        flex-direction: column;
+    }
+    .experience {
+        max-width: 100vw;
+    }
+    .nes-icon.is-large {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        transform: scale(2);
+    }
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        justify-content: flex-end;
+        transform: translateX(0px);
+    }
+    .skill-name {
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
+}

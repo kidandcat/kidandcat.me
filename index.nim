@@ -14,15 +14,17 @@ proc experience(title: string, desc: varargs[string]): VNode =
 
 proc skill(name: string, level: int, love = false): VNode =
   result = buildHtml a(class="skill"):
-      if love:
-        span(class="nes-icon heart love")
-      span(class="skill-name"):
-        text name
-      span(class="nes-icon is-large star " & starLevel(1, level))
-      span(class="nes-icon is-large star " & starLevel(2, level))
-      span(class="nes-icon is-large star " & starLevel(3, level))
-      span(class="nes-icon is-large star " & starLevel(4, level))
-      span(class="nes-icon is-large star " & starLevel(5, level))
+      tdiv:
+        if love:
+          span(class="nes-icon heart love")
+        span(class="skill-name"):
+          text name
+      tdiv(class="stars"):
+        span(class="nes-icon is-large star " & starLevel(1, level))
+        span(class="nes-icon is-large star " & starLevel(2, level))
+        span(class="nes-icon is-large star " & starLevel(3, level))
+        span(class="nes-icon is-large star " & starLevel(4, level))
+        span(class="nes-icon is-large star " & starLevel(5, level))
 
 proc socialNetworks(): VNode =
   result = buildHtml tdiv(class="socials"):
@@ -40,45 +42,52 @@ proc actions(): VNode =
 
 proc createDom(): VNode =
   result = buildHtml(tdiv(class="main")):
+    tdiv(class="nes-balloon from-left", id="saying"):
+      p: 
+        text "Welcome to my CV"
+    tdiv(class="avatar"):
+      img(src="avatar.jpg", id="avatar-img", class="nes-avatar is-large")
     tdiv(class="name"):
       span:
         text "Jairo Caro-Accino Viciana"
     actions()
     socialNetworks()
-    tdiv(class="nes-balloon from-left", id="saying"):
-      p: 
-        text "These are my skills"
-    tdiv(class="avatar"):
-      img(src="avatar.jpg", id="avatar-img", class="nes-avatar is-large")
-    tdiv(class="badges"):
-      skill("react", 5)
-      skill("JS", 5)
-      skill("Nim", 2, true)
-      skill("Go", 4)
-      skill("CSS", 4)
-      skill("PHP", 3)
-      skill("Windows", 3)
-      skill("Mac", 1)
-      skill("Linux", 4)
-      skill("Networking", 3)
-      skill("Security", 3)
-    h3:
-      italic(class="nes-icon trophy")
-      text "Experience"
-    experience("Netelip", """
-    Netelip was my first home, I had my intership there after I finished my latest studies, after 3 months of 
-    intership I stayed there working, in total I spent there 1 year. My first job was to make a complex platform
-    to work, it was developed in symfony, but it was unusable due to the high latency (up to 5s to do any action)
-    in the frontend, the first thing I did was update to PHP7, just with that, it became much more responsive.
-    """, """
-    After that I introduced a real time monitoring system (which we watched on a big TV in the office), some services
-    connecting with Asterisk SIP using Janus Gateway, and a VPS service with NodeJS and Proxmox.
-    """, """
-    I learnt a lot in Netelip, but I was ambitious, and I wanted to experiment life outside of my city, so I moved to...
-    """)
-    experience("Indigitall", """
-    Indigitall was a startup located in Madrid, and so I moved to Madrid
-    """)
+    tdiv(class="sections"):
+      tdiv(class="left"):
+        h3:
+          italic(class="nes-icon trophy")
+          text "Skills"
+        tdiv(class="badges"):
+          skill("react", 5)
+          skill("JS", 5)
+          skill("Nim", 2, true)
+          skill("Go", 4)
+          skill("CSS", 4)
+          skill("PHP", 3)
+          skill("Windows", 3)
+          skill("Mac", 1)
+          skill("Linux", 4)
+          skill("Networking", 3)
+          skill("Security", 3)
+      tdiv(class="right"):
+        h3:
+          italic(class="nes-icon trophy")
+          text "Experience"
+        experience("Netelip", """
+        Netelip was my first home, I had my intership there after I finished my latest studies, after 3 months of 
+        intership I stayed there working, in total I spent there 1 year. My first job was to make a complex platform
+        to work, it was developed in symfony, but it was unusable due to the high latency (up to 5s to do any action)
+        in the frontend, the first thing I did was update to PHP7, just with that, it became much more responsive.
+        """, """
+        After that I introduced a real time monitoring system (which we watched on a big TV in the office), some services
+        connecting with Asterisk SIP using Janus Gateway, and a VPS service with NodeJS and Proxmox.
+        """, """
+        I learnt a lot in Netelip, but I was ambitious, and I wanted to experiment life outside of my city, so I moved to...
+        """)
+        experience("Indigitall", """
+        Indigitall was a startup located in Madrid, the company focused on it Push Notifications As a Service, again, my job was
+        to maintain and upgrade the backend they had in PHP, Symfony too.
+        """)
 
 setRenderer createDom
 addStylesheet "https://unpkg.com/nes.css@latest/css/nes.min.css"
