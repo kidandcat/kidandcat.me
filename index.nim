@@ -1,4 +1,5 @@
-include karax / prelude, jsutils
+include karax / prelude
+import jsutils, dom
 
 proc starLevel(pos, level: int): string =
   if level >= pos: return ""
@@ -90,6 +91,9 @@ proc createDom(): VNode =
         text "Jairo Caro-Accino Viciana"
     actions()
     socialNetworks()
+    tdiv(class="working"):
+      a(href="https://github.com/Ridote/godotExperiments3D/tree/master/RPG-server", target="_blank"):
+        text "Right now working on RPG-server"
     tdiv(class="sections"):
       tdiv(class="left"):
         h3:
@@ -124,8 +128,49 @@ proc createDom(): VNode =
         I learnt a lot in Netelip, but I was ambitious, and I wanted to experiment life outside of my city, so I moved to...
         """)
         experience("Indigitall", """
-        Indigitall was a startup located in Madrid, the company focused on it Push Notifications As a Service, again, my job was
-        to maintain and upgrade the backend they had in PHP, Symfony too.
+        Indigitall is a startup located in Madrid, the company focused on its Push Notifications As a Service, again, my job was
+        to maintain and upgrade the backend they had in PHP, Symfony toom and I managed the servers too.
+        """, """
+        What I learnt the most here was to interact with clients. Because we where just 3 people, and we had big clients, I
+        had to email with clients, go to their offices, etc.
+        """, """
+        We had some interesting performance challenges, when Orange became a client, we instantly had 2 to send push notifications
+        to two million users, that was fun.
+        """, """
+        Although I was very happy here, I was not happy with the lifestyle in Madrid, and our house was too small, and the big distances!
+        Finally a chance to come back to Málaga knocked my door, and in less than 2 weeks, I was back in Málaga.
+        """)
+        experience("Accenture", """
+        My next adventure was in Accenture, this time I was contracted as Frontend Developer with React experience. I was happy to be
+        able to experience working in a big company. I learnt what bureaucracy is, big offices, a lot of people, and very big development
+        teams. It was interesting, I received a very good course from lemoncode.net about React + Redux-Observables. But once again, it was
+        not what I was looking for.
+        """, """
+        In a short time, few months, I saw myself wasting my time, spending hours and hours doing non-sense burocracy and I was not learning
+        anything new (at least programming related, I keep learning a lot of things about the company itself).
+        """, """
+        Finally, most of my mates leaved, and I did it too. Being in Málaga again, there where a lot of possibilities near me.
+        """)
+        experience("Algorath", """
+        Algorath was a startup with just 3 people, placed next to the university of Málaga. I worked here coding mainly in Go. It was my first 
+        experience working with Go with an experienced team.
+        """, """
+        We worked together with an england company, Yoti, developing a distributed ledger to manage identities. I learnt a lot about Go and
+        well practices thanks to very good and experienced people [thanks Piers ;)]. After a few months I was in charge of developing a
+        mobile app using Go Mobile + React Native, we managed to launch a node of the ledger inside the phone.
+        """, """
+        My experience in Algorath was very confortable, and I learnt a lot. I'm grateful for the time I spent there. But finally, one more chance
+        came to me. The chance of remote working...
+        """)
+        experience("Interacso", """
+        Interacso is my current company, I've been working here for a full year now (that's a new thing to me). I closed the contract and start 
+        working remotely without even visiting my company office. After few months, I went to Madrid to meet my mates in person.
+        """, """
+        Here in Interacso I develop mostly frontend with React, any kind of frontend. Mobile apps, desktop apps, browser apps, and even IoT apps
+        (ejem ClearChannel ejem). I have tons of challenges nearly every week. I have awesome mates and leaders. And also to be able to live
+        anywhere I want, and to manage my time are things I will have it hard to say goodbay to.
+        """, """
+        I'm so happy in Interacso that this year has passed very quickly to me.
         """)
     footer:
       text "This website has been made with "
