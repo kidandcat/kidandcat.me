@@ -147,6 +147,13 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+.nes-icon {
+    margin-right: 14px;
+    margin-left: 14px;
+    margin-bottom: 24px;
+    transform: scale(2);
+}
+
 @media (max-width: 800px) {
     .sections {
         flex-direction: column;

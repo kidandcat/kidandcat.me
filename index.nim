@@ -21,11 +21,11 @@ proc skill(name: string, level: int, love = false): VNode =
         span(class="skill-name"):
           text name
       tdiv(class="stars"):
-        span(class="nes-icon is-large star " & starLevel(1, level))
-        span(class="nes-icon is-large star " & starLevel(2, level))
-        span(class="nes-icon is-large star " & starLevel(3, level))
-        span(class="nes-icon is-large star " & starLevel(4, level))
-        span(class="nes-icon is-large star " & starLevel(5, level))
+        span(class="nes-icon star " & starLevel(1, level))
+        span(class="nes-icon star " & starLevel(2, level))
+        span(class="nes-icon star " & starLevel(3, level))
+        span(class="nes-icon star " & starLevel(4, level))
+        span(class="nes-icon star " & starLevel(5, level))
 
 proc socialNetworks(): VNode =
   return buildHtml tdiv(class="socials"):
@@ -166,8 +166,8 @@ proc createDom(): VNode =
         Interacso is my current company, I've been working here for a full year now (that's a new thing to me). I closed the contract and start 
         working remotely without even visiting my company office. After few months, I went to Madrid to meet my mates in person.
         """, """
-        Here in Interacso I develop mostly frontend with React, any kind of frontend. Mobile apps, desktop apps, browser apps, and even IoT apps
-        (ejem ClearChannel ejem). I have tons of challenges nearly every week. I have awesome mates and leaders. And also to be able to live
+        Here in Interacso I develop mostly frontend with React, any kind of frontend. Mobile apps, desktop apps, browser apps, and even IoT apps. 
+        I have tons of challenges nearly every week. I have awesome mates and leaders. And also to be able to live
         anywhere I want, and to manage my time are things I will have it hard to say goodbay to.
         """, """
         I'm so happy in Interacso that this year has passed very quickly to me.
