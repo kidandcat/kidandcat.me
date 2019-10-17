@@ -1,5 +1,5 @@
 include karax / prelude
-import jsutils, dom, jsffi, asyncjs
+import jsutils, dom
 
 proc starLevel(pos, level: int): string =
   if level >= pos: return ""
