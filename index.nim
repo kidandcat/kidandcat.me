@@ -1,5 +1,5 @@
 include karax / prelude
-import jsutils, dom
+import jsutils, dom, jsffi, asyncjs
 
 proc starLevel(pos, level: int): string =
   if level >= pos: return ""
@@ -92,8 +92,8 @@ proc createDom(): VNode =
     actions()
     socialNetworks()
     tdiv(class="working"):
-      a(href="https://github.com/Ridote/godotExperiments3D/tree/master/RPG-server", target="_blank"):
-        text "Right now working on RPG-server"
+      a(href="http://127.0.0.1:8080/ipfs/QmT514G6stGggo7ayqYtNaWhbS68QKPMgCTwmf7DGHsoJV/", target="_blank"):
+        text "This website is also on the distributed internet IPFS"
     tdiv(class="sections"):
       tdiv(class="left"):
         h3:
