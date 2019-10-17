@@ -3595,7 +3595,7 @@ function create_dom_250487() {
 		F.line = 95;
 		var tmp_250498 = tree_171046(44, []);
 		F.line = 95;
-		set_attr_169568(tmp_250498, "href", "http://127.0.0.1:8080/ipfs/QmT514G6stGggo7ayqYtNaWhbS68QKPMgCTwmf7DGHsoJV/");
+		set_attr_169568(tmp_250498, "href", "http://127.0.0.1:8080/ipns/QmbCpqweYng1h2GDaW9AUec2w3nU99KSM6JfJ6CrWj6JQk");
 		F.line = 95;
 		set_attr_169568(tmp_250498, "target", "_blank");
 		F.line = 96;

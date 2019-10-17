@@ -92,7 +92,7 @@ proc createDom(): VNode =
     actions()
     socialNetworks()
     tdiv(class="working"):
-      a(href="http://127.0.0.1:8080/ipfs/QmT514G6stGggo7ayqYtNaWhbS68QKPMgCTwmf7DGHsoJV/", target="_blank"):
+      a(href="http://127.0.0.1:8080/ipns/QmbCpqweYng1h2GDaW9AUec2w3nU99KSM6JfJ6CrWj6JQk", target="_blank"):
         text "This website is also on the distributed internet IPFS"
     tdiv(class="sections"):
       tdiv(class="left"):
