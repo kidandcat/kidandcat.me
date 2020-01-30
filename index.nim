@@ -1,5 +1,23 @@
 include karax / prelude
-import jsutils, dom
+import jsutils, dom, jsffi
+
+proc upupStart(config: JsObject) {.importcpp:"UpUp.start(#)".}
+
+proc upup() =
+  upupStart(JsObject{
+    "cache-version": cstring"v1",
+    "content-url": cstring"/index.html",
+    "assets": [
+      cstring"/index.html",
+      cstring"/index.js",
+      cstring"/style.css",
+      cstring"/upup.min.js",
+      cstring"/kongtext.ttf",
+      cstring"/interacso.png",
+      cstring"/avatar.jpg",
+      cstring"/nim.png",
+    ]
+  })
 
 proc starLevel(pos, level: int): string =
   if level >= pos: return ""
@@ -173,9 +191,13 @@ proc createDom(): VNode =
       text "This website has been made with "
       img(src="nim.png")
 
+addScript "upup.min.js"
 setRenderer createDom
 addStylesheet "https://unpkg.com/nes.css@latest/css/nes.min.css"
 addStylesheet "https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
 addStylesheet "style.css"
 
 
+discard setTimeout(proc() =
+  upup()
+, 2000)
