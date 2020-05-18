@@ -125,6 +125,7 @@ proc createDom(): VNode =
           skill("Go", 5, true)
           skill("CSS", 5)
           skill("PHP", 3)
+          skill("Elixir", 2, true)
           skill("Windows", 3)
           skill("Mac", 1)
           skill("Linux", 5)
@@ -135,6 +136,7 @@ proc createDom(): VNode =
           skill("Nginx", 3, false, true)
           skill("C#", 1, false, true)
           skill("Java", 3, false, true)
+          skill("Erlang", 1, false, true)
           skill("Kotlin", 1, false, true)
           skill("Dart", 1, false, true)
       tdiv(class="right"):
