@@ -3430,7 +3430,7 @@ function create_dom_12070302() {
     F.line = 129;
     add_9820072(tmp_12070316, skill_12035047(makeNimstrLit("Windows"), 3, false, false));
     F.line = 130;
-    add_9820072(tmp_12070316, skill_12035047(makeNimstrLit("Mac"), 1, false, false));
+    add_9820072(tmp_12070316, skill_12035047(makeNimstrLit("Mac"), 2, false, false));
     F.line = 131;
     add_9820072(tmp_12070316, skill_12035047(makeNimstrLit("Linux"), 5, false, false));
     F.line = 132;

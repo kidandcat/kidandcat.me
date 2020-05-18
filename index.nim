@@ -127,7 +127,7 @@ proc createDom(): VNode =
           skill("PHP", 3)
           skill("Elixir", 2, true)
           skill("Windows", 3)
-          skill("Mac", 1)
+          skill("Mac", 2)
           skill("Linux", 5)
           skill("Networking", 4)
           skill("Security", 3)
