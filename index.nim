@@ -31,13 +31,15 @@ proc experience(title: string, desc: varargs[string]): VNode =
       p(class="experience-text"):
         text d
 
-proc skill(name: string, level: int, love = false): VNode =
+proc skill(name: string, level: int, love = false, dislike = false): VNode =
   return buildHtml a(class="skill"):
       tdiv:
         if love:
           span(class="nes-icon heart love")
         span(class="skill-name"):
           text name
+          if dislike:
+            span(class="nes-icon is-large like")
       tdiv(class="stars"):
         span(class="nes-icon star " & starLevel(1, level))
         span(class="nes-icon star " & starLevel(2, level))
@@ -115,17 +117,26 @@ proc createDom(): VNode =
           italic(class="nes-icon trophy")
           text "Skills"
         tdiv(class="badges"):
-          skill("react", 5)
+          skill("React", 5)
+          skill("Svelte", 5, true)
+          skill("React Native", 4)
           skill("JS", 5)
-          skill("Nim", 2, true)
-          skill("Go", 4)
-          skill("CSS", 4)
+          skill("Nim", 3, true)
+          skill("Go", 5, true)
+          skill("CSS", 5)
           skill("PHP", 3)
           skill("Windows", 3)
           skill("Mac", 1)
-          skill("Linux", 4)
-          skill("Networking", 3)
+          skill("Linux", 5)
+          skill("Networking", 4)
           skill("Security", 3)
+          skill("Caddy", 3)
+          skill("Apache", 2, false, true)
+          skill("Nginx", 3, false, true)
+          skill("C#", 1, false, true)
+          skill("Java", 3, false, true)
+          skill("Kotlin", 1, false, true)
+          skill("Dart", 1, false, true)
       tdiv(class="right"):
         h3:
           italic(class="nes-icon trophy")

@@ -20,6 +20,13 @@ html, body {
     flex-direction: column;
 }
 
+.like {
+    width: 20px;
+    height: 20px;
+    transform: rotateX(180deg) !important;
+    margin: 0 !important;
+}
+
 .sections {
     width: 100vw;
     display: flex;
