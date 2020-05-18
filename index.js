@@ -3558,7 +3558,7 @@ function upup_12007017() {
 function HEX3Aanonymous_12075092() {
   var F={procname:"index.:anonymous",prev:framePtr,filename:"index.nim",line:0};
   framePtr = F;
-    F.line = 213;
+    F.line = 214;
     upup_12007017();
   framePtr = F.prev;
 
@@ -3569,4 +3569,5 @@ set_renderer_10745238(create_dom_12070302, "ROOT", null);
 add_stylesheet_12006075(makeNimstrLit("https://unpkg.com/nes.css@latest/css/nes.min.css"));
 add_stylesheet_12006075(makeNimstrLit("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"));
 add_stylesheet_12006075(makeNimstrLit("style.css"));
+document.title = "Jairo Caro-Accino Viciana";
 setTimeout(HEX3Aanonymous_12075092, 2000);

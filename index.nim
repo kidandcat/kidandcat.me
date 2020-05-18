@@ -207,6 +207,7 @@ setRenderer createDom
 addStylesheet "https://unpkg.com/nes.css@latest/css/nes.min.css"
 addStylesheet "https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
 addStylesheet "style.css"
+document.title = "Jairo Caro-Accino Viciana"
 
 
 discard setTimeout(proc() =
