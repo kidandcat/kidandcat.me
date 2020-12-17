@@ -139,7 +139,7 @@ proc createDom(): VNode =
           skill("TypeScript", 4, false, true)
           skill("Apache", 3, false, true)
           skill("Nginx", 3, false, true)
-          skill("C#", 1, false, true)
+          skill("C#", 2, false, true)
           skill("Java", 1, false, true)
           skill("Erlang", 1, false, true)
           skill("Kotlin", 1, false, true)
